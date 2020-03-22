@@ -57,6 +57,12 @@ print ( 'The coefficient for () is '()', format(col_name, regression_model.coef_
 
 intercept=regression_model.intercept[0]
 
+import statsmodels.formula.apl as and
+Cars_def=pd.concat([Y_train,X_train],axis=1)
+Cars_def.head()
+SMF.ols.Cars_def('price')=('bore')+('fuel')
+
+regression_model.score(X_test,Y_test)
 
 
 
