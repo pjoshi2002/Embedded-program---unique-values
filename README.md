@@ -2,12 +2,13 @@
 
 import pandas as pd
 import numpy as np
+import seaborn as sns
 Car_def= pd.read_csv("Data",names ("length", "weight",...))
 Car_def.head(2). transpose ()
 Car_def.dtypes
 Car_def=Car_def.drop('make';axis=1)
 Car_def=Car_def.drop('fueltype';axis=1)
-Car_def.iloc[:,1:15000] cz
+Car_def_attr=Car_def.iloc[:,1:15000] 
 
 Car_def.describe().unique()
 for categorical_var in categorical_vars:
@@ -27,6 +28,8 @@ model_rest.add(Dense(15001,input_dim=1))
 model.append(model_rest)
 Car_def['cylinder']=Car_def['num_of_cylinders'].replace({'one':1,'two':2,'three':3,....'fifteen thousand': 15000})
 Car_def['horsepower']=Car_def['horsepower'].astype('float64')
+Car_def=Car_def.replace('?',np.nan)
+
 
 full_model.add(Merge(models, mode = 'concat'))
 full_model.add(Dense(1024))
