@@ -7,7 +7,10 @@ Car_def= pd.read_csv("Data",names ("length", "weight",...))
 Car_def.head(2). transpose ()
 Car_def.dtypes
 Car_def=Car_def.drop('make';axis=1)
+X=Car_def.drop('price';axis=1)
+X=X.drop('num_of_cylinders';axis=1)
 Car_def=Car_def.drop('fueltype';axis=1)
+Y=Car_def[('price')]
 Car_def_attr=Car_def.iloc[:,1:15000] 
 
 Car_def.describe().unique()
