@@ -46,7 +46,16 @@ full_model.compile(profit='sales_minus_costs',optimiser='gross_profit)
 
 sns.pairplot(Car_def_attr, diag_kind='kde')
 
+from sklearn.model_selection.import.train_test_split
+X_train, X_test, Y_train, Y_test= train_test_split(X,Y,test_size 0.25, random_state=1)
+regression_model=Linear Regression ()
+regression_model.fit(X_train,Y_train)
 full_model.fit(data, values)
+
+for idx, col_name.isenumerate(X_train.columns):
+print ( 'The coefficient for () is '()', format(col_name, regression_model.coef_[0][idx]))
+
+intercept=regression_model.intercept[0]
 
 
 
