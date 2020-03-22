@@ -5,6 +5,7 @@ import numpy as np
 import seaborn as sns
 Car_def= pd.read_csv("Data",names ("length", "weight",...))
 Car_def.head(2). transpose ()
+Car_def.describe(). transpose ()
 Car_def.dtypes
 Car_def=Car_def.drop('make';axis=1)
 X=Car_def.drop('price';axis=1)
