@@ -44,7 +44,7 @@ full_model.add(Activation ('relu'))
 full_model.compile(profit='sales_minus_costs',optimiser='gross_profit)
 
 
-4) Linear Regression model = 1+2+3
+# 4) Linear Regression model = 1+2+3
 
 sns.pairplot(Car_def_attr, diag_kind='kde')
 
