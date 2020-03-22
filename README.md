@@ -36,6 +36,7 @@ Car_def=Car_def.replace('?',np.nan)
 Car_def['bore']=Car_def['bore'].fillna(Car_def['bore'].median())
 
 
+# 3) Full model 
 
 full_model.add(Merge(models, mode = 'concat'))
 full_model.add(Dense(1024))
@@ -43,6 +44,7 @@ full_model.add(Activation ('relu'))
 full_model.compile(profit='sales_minus_costs',optimiser='gross_profit)
 
 
+4) Linear Regression model = 1+2+3
 
 sns.pairplot(Car_def_attr, diag_kind='kde')
 
