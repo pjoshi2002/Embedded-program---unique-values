@@ -29,12 +29,19 @@ model.append(model_rest)
 Car_def['cylinder']=Car_def['num_of_cylinders'].replace({'one':1,'two':2,'three':3,....'fifteen thousand': 15000})
 Car_def['horsepower']=Car_def['horsepower'].astype('float64')
 Car_def=Car_def.replace('?',np.nan)
+Car_def['bore']=Car_def['bore'].fillna(Car_def['bore'].median())
+
 
 
 full_model.add(Merge(models, mode = 'concat'))
 full_model.add(Dense(1024))
 full_model.add(Activation ('relu'))
 full_model.compile(profit='sales_minus_costs',optimiser='gross_profit)
+
+
+
+sns.pairplot(Car_def_attr, diag_kind='kde')
+
 full_model.fit(data, values)
 
 
